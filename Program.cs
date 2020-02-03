@@ -171,6 +171,11 @@ namespace DNWS
             request = new HTTPRequest(requestStr);
             request.addProperty("RemoteEndPoint", _client.RemoteEndPoint.ToString());
 
+            // Console.WriteLine(request.getPropertyByKey("RemoteEndPoint"));
+            // Console.WriteLine(request.getPropertyByKey("User-Agent"));
+            // Console.WriteLine(request.getPropertyByKey("Accept-Language"));
+            // Console.WriteLine(request.getPropertyByKey("Accept-Encoding"));
+
             // We can handle only GET now
             if(request.Status != 200) {
                 response = new HTTPResponse(request.Status);
